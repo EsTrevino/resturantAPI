@@ -2,6 +2,7 @@ import express from 'express';
 import config from '../config/index';
 import middleware from '../middleware';
 import initializeDb from '../db';
+import restaurant from '../controller/restaurant';
 
 let router = express();
 
@@ -12,9 +13,9 @@ initializeDb(db =>{
   //use db as database connection for routes
 
   //we could add internal middleware
-  router.use(middleware({config, db}));
+  router.use(middleware({config,db}));
   //specify routes here
-
+  router.use('/restaurant', restaurant({config, db}));
 })
 
 export default router;

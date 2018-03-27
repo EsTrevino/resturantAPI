@@ -64,3 +64,5 @@ setup for .babelrc file:
     -middleware index.js sets up middleware for use in routes index.js
   c) setup db.js file to export the connection function that the routes file will use
 ------------------------------------------------------
+------------------------------------------------------
+2)Adding data POST Requests in NODE
